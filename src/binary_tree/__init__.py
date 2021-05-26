@@ -1,21 +1,12 @@
-from binary_tree import binaryTree
-from traverse import traverse
+from bintrees import BinaryTree
+from data import data
 
-tree = binaryTree("Root")
+tree = BinaryTree(data)
+tree.update({ 6: 'Teal' })
 
-BranchA = binaryTree("Branch A")
-BranchB = binaryTree("Branch B")
-tree.left = BranchA
-tree.right = BranchB
+def displayKeyValue(key, value):
+  print('Key: ', key, 'Value: ', value)
 
-LeafC = binaryTree("Leaf C")
-LeafD = binaryTree("Leaf D")
-LeafE = binaryTree("Leaf E")
-LeafF = binaryTree("Leaf F")
-
-BranchA.left = LeafC
-BranchA.right = LeafD
-BranchB.left = LeafE
-BranchB.right = LeafF
-
-traverse(tree)
+tree.foreach(displayKeyValue)
+print('Item 3 contains: ', tree.get(3))
+print('The maximum item is: ', tree.max_item())
