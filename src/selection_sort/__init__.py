@@ -12,4 +12,3 @@ for scanIndex in range(0, len(data)):
   if minIndex != scanIndex:
     data[scanIndex], data[minIndex] = data[minIndex], data[scanIndex]
     print(data)
-

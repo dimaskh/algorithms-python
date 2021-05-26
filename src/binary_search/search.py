@@ -17,6 +17,3 @@ def search(searchList, key):
   else:
     print("searchList now contains ", searchList[0:mid])
     search(searchList[0:mid], key)
-
-aList = list(range(1, 21))
-search(aList, 5)

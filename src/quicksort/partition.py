@@ -1,5 +1,3 @@
-data = [9, 5, 7, 4, 2, 8, 1, 10, 6, 3]
-
 def partition(data, left, right):
   pivot = data[left]
   leftIndex = left + 1
@@ -19,15 +17,3 @@ def partition(data, left, right):
   print(data)
 
   return rightIndex
-
-def quickSort(data, left, right):
-  if right <= left:
-    return
-  else:
-    pivot = partition(data, left, right)
-    quickSort(data, left, pivot - 1)
-    quickSort(data, pivot + 1, right)
-
-  return data
-
-quickSort(data, 0, len(data) - 1)
