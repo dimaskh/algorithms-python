@@ -20,3 +20,13 @@ print("Degrees: ", degrees)
 
 clustering = nx.clustering(AGraph)
 print("Clustering: ", clustering)
+
+centrality = nx.degree_centrality(AGraph)
+print("Centrality: ", centrality)
+
+AGraph.add_node(7)
+closeness_centrality = nx.closeness_centrality(AGraph)
+print("Closeness Centrality: ", closeness_centrality)
+
+betweenness_centrality = nx.betweenness_centrality(AGraph)
+print("Betweenness Centrality: ", betweenness_centrality)
