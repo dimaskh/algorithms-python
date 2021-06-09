@@ -25,6 +25,17 @@ weighted_directed_graph = {
   'F': {}
 }
 
+directed_graph = {
+  'A': ['B', 'F', 'H'],
+  'B': ['A', 'C'],
+  'C': ['B', 'D'],
+  'D': ['C', 'E'],
+  'E': ['D', 'F', 'G'],
+  'F': ['E', 'A'],
+  'G': ['E', 'H'],
+  'H': ['G', 'A']
+}
+
 positions = {
   'A': [0.00, 0.50],
   'B': [0.25, 0.75],
